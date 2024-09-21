@@ -38,4 +38,4 @@ FROM alpine:3.14
 WORKDIR /myfont
 # 从第一阶段复制字体文件到最终镜像
 COPY --from=downloader /tmp/myfont /myfont
-# COPY --from=builder /myfont/windows /myfont/windows
+COPY --from=builder /myfont/windows /myfont/windows
